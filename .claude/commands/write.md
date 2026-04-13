@@ -239,6 +239,14 @@ After completing the article, automatically save to:
 
 Example: `drafts/content-marketing-strategies-2025-10-15.md`
 
+### Word Document Export
+After saving the markdown file, immediately convert it to a Word document:
+```bash
+python3 data_sources/modules/md_to_docx.py drafts/[topic-slug]-[YYYY-MM-DD].md
+```
+This produces `drafts/[topic-slug]-[YYYY-MM-DD].docx` alongside the markdown file.
+The `.docx` file is the human-readable deliverable; the `.md` file is retained for the publishing pipeline.
+
 ## Automatic Content Scrubbing
 
 **CRITICAL**: Immediately after saving the article file, automatically invoke the content scrubber to remove AI watermarks and telltale patterns.
